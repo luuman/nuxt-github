@@ -17,7 +17,7 @@
     <nuxt-link class="view-all-btn"
       :to="{
         name: 'USER_REPO_LIST'
-      }"> VIEW ALL REPOS </nuxt-link>
+      }"> {{$t('repos.all')}} </nuxt-link>
   </div>
 </template>
 

@@ -1,19 +1,44 @@
 <template lang="html">
   <div class="footer original">
     <div id="footer-logo">
-      <a href="https://github.com/SidKwok/github-explorer" target="_blank">
+      <a target="_blank">
         <i class="fa fa-github"></i>
-        <span id="version">
-          Vue
+        <span id="version" @click="showLocal">
+          {{Locale}}
         </span>
       </a>
     </div>
     <div id="footer-credit" v-html="$t('footer.credit')"></div>
+    <div class="footer-local" v-show="isLocal">
+      <ul>
+        <li v-for="(item, index) in Locales" :key="index" @click="Localed(item)" :class="{active: item == Locale}">{{item}}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import Locale from '~/locales'
+
 export default {
+  data() {
+    return {
+      isLocal: false,
+      Locale: this.$i18n.locale,
+      Locales: Locale()
+    }
+  },
+  methods: {
+    showLocal () {
+      this.isLocal = true
+    },
+    Localed (name) {
+      this.isLocal = false
+      this.$i18n.locale = name
+      this.Locale = name
+      this.$store.commit('SET_LANG', name)
+    }
+  }
 }
 </script>
 
@@ -26,9 +51,33 @@ export default {
     padding: 15px;
     z-index: 1;
     position: relative;
+  .footer-local{
+    position: absolute;
+    left: 0;
+    // background-color: #0f2035;
+    background-image: linear-gradient(to bottom, #224365, #0a1b30);
+    bottom: 65px;
+    width: 100%;
+    ul{
+      margin: auto;
+      padding: 15px;
+      overflow: hidden;
+    }
+    li{
+      color: #FFF;
+      line-height: 20px;
+      list-style: none;
+      float: left;
+      width: 25%;
+    }
+    .active{
+      color: #aeb6c0;
+    }
+  }
   #footer-logo {
     font-size: 38px;
     line-height: 38px;
+    position: relative;
     a {
       color: #ffffff;
     }

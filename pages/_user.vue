@@ -17,7 +17,7 @@
     <router-link class="view-all-btn"
       :to="{
         name: 'user-username-repos'
-      }"> VIEW ALL REPOS </router-link>
+      }">{{$t('repos.all')}}</router-link>
   </div>
 </template>
 

@@ -10,7 +10,7 @@
     "all": "显示所有仓库"
   },
   "footer": {
-    "credit": "喂，我是Luuman。<br />WEB使用Nuxt"
+    "credit": "喂，我是Luuman<br />WEB使用Nuxt"
   },
   "error": {
     "introduction": "这里什么也没找到！"
