@@ -1,0 +1,18 @@
+{
+  "common": {
+    "follow": "关注",
+    "followers": "关注着",
+    "public": "公开仓库",
+    "following": "关注中",
+    "repos": "显示仓库"
+  },
+  "repos": {
+    "all": "显示所有仓库"
+  },
+  "footer": {
+    "credit": "喂，我是Luuman。<br />WEB使用Nuxt"
+  },
+  "error": {
+    "introduction": "这里什么也没找到！"
+  }
+}

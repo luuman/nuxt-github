@@ -1,0 +1,18 @@
+{
+  "common": {
+    "follow": "Follow",
+    "followers": "Followers",
+    "public": "Public repos",
+    "following": "Following",
+    "repos": "VIEW REPOSITORIES"
+  },
+  "repos": {
+    "all": "VIEW ALL REPOS"
+  },
+  "footer": {
+    "credit": "Yo, I'm Luuman. <br />Web by Nuxt"
+  },
+  "error": {
+    "introduction": "Didn’t find anything here!"
+  }
+}
